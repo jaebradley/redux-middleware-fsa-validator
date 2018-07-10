@@ -6,7 +6,7 @@ import {
   CONSOLE_GROUP_NAME,
 } from './constants';
 
-const fsaValidator = () => next => (action) => {
+const fsaValidator = () => next => action => {
   try {
     const returnValue = next(action);
     if (!isFSA(action)) {
